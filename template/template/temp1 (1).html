@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Template Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .template-preview {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+        }
+        .radio-buttons {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .radio-buttons label {
+            margin-right: 20px;
+            margin-bottom: 10px;
+        }
+        .generate {
+           color: blue;
+           float:right;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>Select a Blog Template</h1>
+
+<form id="templateForm">
+    <div class="radio-buttons">
+        <label>
+            <input type="radio" name="template" value="page1.html" onclick="updatePreview(this.value)">
+            Trendy
+        </label>
+        <label>
+            <input type="radio" name="template" value="page2.html" onclick="updatePreview(this.value)">
+            Casual
+        </label>
+        <label>
+            <input type="radio" name="template" value="page3.html" onclick="updatePreview(this.value)">
+            Formal
+        </label>
+        <label>
+            <input type="radio" name="template" value="page4.html" onclick="updatePreview(this.value)">
+            Minimalist
+        </label>
+        <label>
+            <input type="radio" name="template" value="page5.html" onclick="updatePreview(this.value)">
+            Bold
+        </label>
+        <label>
+            <input type="radio" name="template" value="page6.html" onclick="updatePreview(this.value)">
+            Vintage/Retro
+        </label>
+        <label>
+            <input type="radio" name="template" value="page7.html" onclick="updatePreview(this.value)">
+            Elegant
+        </label> 
+        
+    </div>
+</form>
+
+<div class="generate">
+    <button id="generateButton">Generate</button>
+</div>
+<h2>Template Preview</h2>
+<iframe id="templatePreview" class="template-preview" src=""></iframe>
+
+<script>
+    function updatePreview(template) {
+        document.getElementById('templatePreview').src = template;
+    }
+var currentPage = 1; 
+ var radioButtons = document.querySelectorAll('input[type="radio"]');
+    var generateButton = document.getElementById('generateButton');
+    var selectedRadioButtonIndex = 0;
+    generateButton.addEventListener('click', function() {
+        if (selectedRadioButtonIndex < radioButtons.length - 1) {
+            selectedRadioButtonIndex++;
+        } else {
+            selectedRadioButtonIndex = 0;
+        }
+        radioButtons[selectedRadioButtonIndex].checked = true;
+        radioButtons[selectedRadioButtonIndex].click();
+    });
+</script>
+
+</body>
+</html>

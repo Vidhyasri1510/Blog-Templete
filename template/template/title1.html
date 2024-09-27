@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Title with Oval Textarea</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .title {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .textarea-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 20px;
+            border-radius: 50px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            outline: none;
+            resize: none;
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+            background-color: #f4f4f9;
+        }
+        .submit-button {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .submit-button:hover {
+            background-color: #e05a50;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+        <div class="title">Title</div>
+        <form action="temp1.html" method="get">
+            <div class="textarea-container">
+                <textarea name="content" placeholder="Enter your text here..."></textarea>
+            </div>
+            <button type="submit" class="submit-button" formaction="temp1 (1).html">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
